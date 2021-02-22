@@ -7,7 +7,7 @@ public class ProjectDTO {
     private Long uniqueId;
     private String title;
     private LocalDate createdDate;
-    private List<ToDoListDTO> toDoListDTOS;
+    private List<ToDoListDTO> toDoLists;
 
     public Long getUniqueId() {
         return uniqueId;
@@ -33,12 +33,12 @@ public class ProjectDTO {
         this.createdDate = createdDate;
     }
 
-    public List<ToDoListDTO> getToDoListDTOS() {
-        return toDoListDTOS;
+    public List<ToDoListDTO> getToDoLists() {
+        return toDoLists;
     }
 
-    public void setToDoListDTOS(List<ToDoListDTO> toDoListDTOS) {
-        this.toDoListDTOS = toDoListDTOS;
+    public void setToDoLists(List<ToDoListDTO> toDoLists) {
+        this.toDoLists = toDoLists;
     }
 
 

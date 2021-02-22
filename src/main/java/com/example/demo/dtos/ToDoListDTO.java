@@ -1,7 +1,5 @@
 package com.example.demo.dtos;
 
-import com.example.demo.Entity.Project;
-
 import java.time.LocalDate;
 
 public class ToDoListDTO {
@@ -10,7 +8,7 @@ public class ToDoListDTO {
     private Boolean status;
     private LocalDate creationDate;
     private LocalDate updateDate;
-    private ProjectDTO projectDTO;
+    private ProjectDTO project;
 
     public Long getUniqueId() {
         return uniqueId;
@@ -52,12 +50,12 @@ public class ToDoListDTO {
         this.updateDate = updateDate;
     }
 
-    public ProjectDTO getProjectDTO() {
-        return projectDTO;
+    public ProjectDTO getProject() {
+        return project;
     }
 
-    public void setProjectDTO(ProjectDTO projectDTO) {
-        this.projectDTO = projectDTO;
+    public void setProject(ProjectDTO project) {
+        this.project = project;
     }
 
 

@@ -9,7 +9,7 @@ public class Project {
     private Long uniqueId;
     private String title;
     private LocalDate createdDate;
-    private List<ToDoLists> toDoListsList;
+    private List<ToDoLists> toDoLists;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,11 +43,11 @@ public class Project {
     }
 
     @OneToMany(mappedBy = "project",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    public List<ToDoLists> getToDoListsList() {
-        return toDoListsList;
+    public List<ToDoLists> getToDoLists() {
+        return toDoLists;
     }
 
-    public void setToDoListsList(List<ToDoLists> toDoListsList) {
-        this.toDoListsList = toDoListsList;
+    public void setToDoLists(List<ToDoLists> toDoLists) {
+        this.toDoLists = toDoLists;
     }
 }

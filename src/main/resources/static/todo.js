@@ -34,7 +34,7 @@ $(document).ready(function (e){
         getTodoLists(".todo_class",todoList);
         let projectObj ={};
         projectObj.title=title;
-        projectObj.toDoListDTOS=todoList;
+        projectObj.toDoLists=todoList;
         let projectJsonData=JSON.stringify(projectObj);
 
         $.ajax({

@@ -3,7 +3,6 @@ package com.example.demo.Controller;
 import com.example.demo.Service.ProjectService;
 import com.example.demo.dtos.ProjectDTO;
 import com.example.demo.dtos.ToDoListDTO;
-import org.apache.maven.model.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -31,8 +30,9 @@ public class Controller {
     public ResponseEntity<?>saveData(@RequestBody ProjectDTO projectDTO){
         LocalDate createDate = LocalDate.now();
         projectDTO.setCreatedDate(createDate);
-        for(ToDoListDTO toDoListDTO:projectDTO.getToDoListDTOS()){
-            toDoListDTO.setProjectDTO(projectDTO);
+        for(ToDoListDTO toDoListDTO:projectDTO.getToDoLists()){
+            toDoListDTO.setCreationDate(createDate);
+            toDoListDTO.setProject(projectDTO);
         }
         projectService.save(projectDTO);
         return new ResponseEntity<>(new HttpHeaders(), HttpStatus.OK);
