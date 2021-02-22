@@ -1,8 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title></title>
+    <title>To Do Project</title>
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.js}"></script>
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/todo.js}"></script>
 </head>
 <body>
-Anshuman
+<div class="row">
+    <div style="margin-bottom: 1%;">
+        <input type="text" id="projectTitle" placeholder="Project Title" style="margin-left: 1.8%;">
+    </div>
+    <div style="margin-bottom: 1%" class="todo_class">
+        <input type="checkbox" name="status" class="status" style="vertical-align: middle">
+        <input type="text" class="description" placeholder="To Do">
+        <input type="button" class="add_new" value="Add New">
+        <input type="button" class="remove_key" value="Remove">
+    </div>
+    <div class="save">
+        <button type="submit" id ="save" style="margin-left: 10%">Save</button>
+    </div>
+    <div>
+    </div>
+</div>
 </body>
 </html>

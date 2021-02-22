@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 public class Project {
     private Long uniqueId;
-    private String Title;
+    private String title;
     private LocalDate createdDate;
     private List<ToDoLists> toDoListsList;
 
@@ -25,11 +25,11 @@ public class Project {
     @Basic
     @Column(name = "project_title")
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     @Basic

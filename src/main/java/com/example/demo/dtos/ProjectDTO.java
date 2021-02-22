@@ -1,13 +1,11 @@
 package com.example.demo.dtos;
 
-import com.example.demo.Entity.ToDoLists;
-
 import java.time.LocalDate;
 import java.util.List;
 
 public class ProjectDTO {
     private Long uniqueId;
-    private String Title;
+    private String title;
     private LocalDate createdDate;
     private List<ToDoListDTO> toDoListDTOS;
 
@@ -20,11 +18,11 @@ public class ProjectDTO {
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public LocalDate getCreatedDate() {
